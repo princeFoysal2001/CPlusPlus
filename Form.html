@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admission Form of RUET</title>
+        <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+        <script href="fontawesome-free-5.15.3-web/js/all.js"></script>
+        <style>
+            body 
+            {
+                width:100%;
+                margin-left:0px; margin-right:0px;
+                color:black;
+            }
+            nav 
+            {
+                display:inline-block;   font-family:arial,sans-serif;   text-transform:uppercase;   width:100%;     background-color:#222;
+                position:sticky;     top:0;
+            }
+            nav a 
+            {
+                float:left;
+            }
+            a.login
+            {
+                float:right;     
+            }
+            nav a:link, nav a:visited
+            {
+                font-weight:bold;   padding:12px;   display:block;  text-decoration:none; color:white;
+            }
+            nav a[data-link-status="login"]
+            {
+                color:white;    background-color:darkgreen;
+            }
+            nav a:hover
+            {
+                color:skyblue;
+                background-color:#111;
+            }
+            a.right_align
+            {
+                float:right;
+            }
+            #search_bar
+            {
+                display:inline; display:none;
+            }
+            #search_bar:target
+            {
+                outline:1px hidden red;     padding:7px;    margin-top:5px;   display:block;  background-color:black;     color:white;    float:right;
+            }
+            nav i:hover
+            {
+                color:skyblue;     cursor:pointer;                
+            }
+
+            input[type="text"], input[type="number"]
+            {
+                border:2px black dotted;
+                border-top:none;
+                border-left:none;
+                border-right:none;
+                padding:2px;
+                margin:2px;
+            }
+            input:focus, textarea:focus 
+            {
+                background-color:midnightblue;
+                color:white;
+                border:2px lightgray solid;
+            }
+            input:out-of-range 
+            {
+                color:red;
+                border:2px red solid;
+            }
+            #heading 
+            {
+                text-align:center;
+            }
+            #name_of 
+            {
+                font-size:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="HTML_PRCTC.html"><i class="fas fa-home"></i></a> <a href="Me.html">About</a> <a href="Form.html">Form</a>
+            <a href="#search_bar" class="right_align"><i class="fas fa-search"></i></a> <input id="search_bar" type="search" placeholder="Search your keywords...">
+        </nav>
+        <div id="heading">
+            <img height="50px" width="50px" src="Picture1.png"><p id="name_of">Rajshahi University of Engineering and Technology</p>
+        </div>
+        <p style="text-align:center;"> Rajshahi, Bangladesh</p>
+        <hr>
+        <h2 style="text-align:center; font-family:monospace;"> <u>Admission Form</u></h2>
+        <form  id="my_form" accept-charset="utf-8" action="Mytext.txt" method="GET" target="_top">
+            <!--This fieldset is for personal information-->
+            <fieldset>
+                <legend>Personal Info:</legend>
+                <label for="first_name">First Name:</label> <input type="text" id="f_name" name="first_name" dirname="first_name.dir" size="20" required><br>
+                <label for="last_name">Last Name:</label> <input type="text" id="last_name" name="last_name" dirname="last_name.dir" size="20"><br>
+                <label for="father_name">Father's Name:</label> <input type="text" id="father_name" name="father_name" dirname="father_name.dir"><br>
+                <label for="mother_name">Mother's Name:</label> <input type="text" id="mother_name" name="mother_name" ><br>
+                <label for="age">Age:</label> <input type="number" id="age" name="age" min="10" max="25"><br>
+                <label for="ssc_roll">SSC Roll:</label> <input type="number" id="ssc_roll" name="ssc_roll" maxlength="6"><br>
+                <label for="hsc_roll">HSC Roll:</label> <input type="number" id="hsc_roll" name="hsc_roll" maxlength="6"><br>
+                <label for="reg_no">Registration:</label> <input type="number" id="reg_no" name="reg_no" maxlength="10"><br>
+                <label for="date_of_birth">Date of birth:</label>
+                <input type="date" id="date_of_birth" name="dob"><br>
+
+                <!--Selecting gender-->
+                <label>Select your gender: </label>
+                <input type="radio" id="male" name="gender" value="male" checked> <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" > <label for="female">Female</label>
+                <input type="radio" id="others" name="gender" value="others"> <label for="others">Others</label><br>
+
+                <!--Documents you have-->
+                <label>Documents(You have):</label><br>
+                <input type="checkbox" id="nid" name="doc" value="nid" checked> <label for="nid">NID</label><br>
+                <input type="checkbox" id="passp" name="doc" value="passp"> <label for="passp">Passport</label>
+            </fieldset><br>
+
+            <!--Datalists-->
+            <datalist id="dist_name"> 
+                <option value="Dhaka"> 
+                <option value="Cumilla">
+                <option value="Rajshahi">
+                <option value="Khulna">
+                <option value="Barishal">
+            </datalist>
+            <datalist id="div_name">
+                <option value="Dhaka">
+                <option value="Chattogram">
+                <option value="Rajshahi">
+                <option value="Khulna">
+                <option value="Barisal">
+                <option value="Sylhet">
+            </datalist>
+            
+            <!--This fieldset is for Contact information-->
+            <fieldset>
+                <legend>Contact Info:</legend>
+                <label for="divn">Division:</label>
+                <select id="divn" name="division">
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chattogram">Chattogram</option>
+                    <option value="rajshahi">Rajshahi</option>
+                </select><br>
+                <label for="dist">District:</label>
+                <select id="dist" name="district">
+                    <optgroup label="Dhaka division">
+                        <option value="dhaka">Dhaka</option>
+                    </optgroup>
+                    <optgroup label="Chattogram division">
+                        <option value="cumilla">Cumilla</option>
+                    </optgroup>
+                </select><br>
+                <label for="upazila">Upazila:</label> <input id="upazila" name="upazila"><br>
+                <label for="des_addr">Describe your adress:</label><br><textarea cols="30" rows="10" id="des_addr" name="address" placeholder="Type here" form="my_form" maxlength="300" wrap="hard"></textarea><br>
+                <label for="telephone">Telephone:</label> <input type="tel" id="telephone" name="telephone"><br>
+            </fieldset>
+            <p>Your picture:</p>
+            <label for="photo">Choose a file:</label>
+            <input type="file" id="photo" name="photo" accept="image/*"><br>
+            <input type="image" alt="Submit"><br>
+            <label for="submit">Click here to submit this form</label> <button type="submit" id="submit" value="Submit" form="my_form">Submit</button>
+            <button type="reset" form="my_form">Reset</button>
+        </form>
+    </body>
+</html> 
