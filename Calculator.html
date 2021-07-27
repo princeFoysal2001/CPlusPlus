@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS_calculator.css">
+        <script src="JS_calculator.js"></script>
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="screen">
+                <p id="input">0</p>
+                <p id="output"></p>
+            </div>
+            <div class="numberpad">
+                <button class="top_row">SHIFT</button> <button class="top_row">ALPHA</button> 
+                <button class="nav_but">REPALY</button>  <button class="top_row">MODE</button>
+                <button class="top_row">ON</button><br>
+                <!-- 7 8 9 -->
+                <button id="seven" onclick="GetValue(id)" value="7">7</button>
+                <button id="eight" onclick="GetValue(id)" value="8">8</button>
+                <button id="nine" onclick="GetValue(id)" value="9">9</button> 
+
+                <!--Delete and AC-->
+                <button>DEL</button> 
+                <button>AC</button><br>
+                <!----------------->
+                <!-- 4 5 6 -->
+                <button id="four" onclick="GetValue(id)" value="4">4</button> 
+                <button id="five" onclick="GetValue(id)" value="5">5</button> 
+                <button id="six" onclick="GetValue(id)" value="6">6</button> 
+                <!----------->
+                <!-- MUL DIV-->
+                <button>*</button>
+                <button>/</button><br>
+                <!----------->
+                <!-- 1 2 3 -->
+                <button id="one" onclick="GetValue(id)" value="1" accesskey=1>1</button> 
+                <button id="two" onclick="GetValue(id)" value="2">2</button> 
+                <button id="three" onclick="GetValue(id)" value="3">3</button> 
+                <!----------->
+                <button id="plus" onclick="GetOperator(id)" value="+">+</button> 
+                <button id="minus" onclick="GetOperator(id)" value="-">-</button><br>
+                <!----------->
+                <button id="zero" onclick="GetValue(id)" value="0">0</button> 
+                <button>.</button> <button>*10^(x)</button> 
+                <button>Ans</button> <button button id="equal" onclick="GetOperator(id)" value="=">=</button>
+            </div>
+        </div>
+    </body>
+</html>
